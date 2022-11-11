@@ -1,0 +1,14 @@
+
+<h1>{{ hotelName }}</h1>
+<div [hidden] = "hideRooms">
+    Number of rooms:
+    <div [innerText]="noOfRooms"></div>
+</div>
+
+{{ rooms?.availableRooms ?? 'No Rooms' }}
+
+<div *ngIf="rooms?.availableRooms">
+    Rooms List
+</div>
+
+<button (click) = "toggle()">Toggle</button>
